@@ -1,42 +1,54 @@
-# Gestion_Terrain_Backend
-1- Gestion Des Terrains : est une application coté web et mobile, qui permet la gestion des terrains, création des terrains et les catégoriser par villes et zones.
-                       Ainsi qu'elle permet la reservation des terrains et la gestion de ces réservation.
-                       Les terrains seront affiché dans une map avec la possibilité d'afficher la distance entre le client et le plus proche terrain ainsi que l'itinéraire.
+# Localisation des terrains
+ Ce projet a pour but de mettre en place une application mobile qui permet la localisation des terrains par zone et ville, la recherche d'un terrain, la reservation d'un terrain en precisant la date de reservation.Les terrains seront affiché dans une map avec la possibilité d'afficher la distance entre le client et un tel terrain ainsi que l'itinéraire.
+ 
+ Ce projet utilise spring boot cote backend où Il traitera les demandes de  l'interface, il interrogit la base de données pour récupérer ou mettre à jour des données, et renvoit des réponses à l'interface et React cote frontend de notre application Web. Il communiquera avec le backend utiliser des API pour récupérer et mettre à jour les données.
 
-2- Getting Started :
+# Fonctionnalités
 
-        -Prerequisites :
-        
-            Node.js
-            ReactJS
-            Android Studio
-            
-        -Installing
-        
-            1-Clone the repository :
-            
-            git clone https://github.com/Hmayda-Abdessamad/Terrain.git
-            
-            2-Install the dependencies:
-            npm install
-            
-            3-Run the app :
-            npm start
-            
- 3- The architecture of our App :
-      
-        -React frontend: This will be the client-side of our web application. It will communicate with the backend 
-          using APIs to retrieve and update data.
-        
-        -Spring Boot backend: This will be the server-side of our web application. It will handle requests from
-          the frontend, query a database to retrieve or update data, and return responses to the frontend.
-        
-        -Database: We are using  MySQL, The Spring Boot backend will connect to the database to retrieve and update data.
-        
-        -Mobile app: The mobile app will be a separate client that communicates with the backend using APIs.
-          It will use the MVVM architecture, with the View representing the user interface, 
-          the ViewModel handling the business logic, and the Model representing the data.
-          
-          
-![maxresdefault](https://user-images.githubusercontent.com/101585977/211149816-fbb5c4ff-8ed3-4f77-a678-edc13b525a14.jpg)
-![156711399-b38e9f5c-10f9-49fe-b979-75cd5cb78989](https://user-images.githubusercontent.com/101585977/211149822-736f9621-6fcb-4c48-980a-e643c2c7c9af.png)
+1. Affichage des terrains ainsi leurs informations.
+
+2. Possibilité de filtrer les terrains.
+
+3. Affichage de la distance entre le client et un tel terrain selectionné et l'itineraire.
+
+4. Réservation d'un terrain.
+
+# étapes:
+
+ On a crée un nouveau projet Spring Boot en utilisant l'outil de création de projets Spring Initializr.Nous avons choisi les dépendances Spring Data JPA et MySQL Driver pour le projet.
+
+On a configuré l'application Spring Boot pour se connecter à la base de données MySQL en modifiant les propriétés de connexion dans le fichier application.properties.
+
+Nous avons crée des entités JPA pour représenter les objets de l'application dans la base de données. Ces entités seront mappées à des tables de base de données et serviront de couche d'abstraction entre votre application et la base de données.
+
+On a crée un repository Spring Data JPA pour chaque entité afin de gérer les opérations de persistance des objets de votre application dans la base de données.
+
+On a crée des contrôleurs Spring MVC pour gérer les requêtes HTTP et exposer les données de votre application sous forme d'API REST.on a utilise  les repositories JPA pour récupérer et enregistrer les données auprès de la base de données.
+
+Lancez votre application Spring Boot et testez vos API en envoyant des requêtes HTTP à l'aide d'un outil de test d'API comme Postman.
+
+On a utilisé Spring Security pour protéger vos API et contrôler l'accès des utilisateurs.
+
+On a testé les API en utilisant Postman.
+
+# Mise en place du projet
+
+Pour mettre en place ce projet, vous aurez besoin des éléments suivants :
+
+Un éditeur de code (comme Eclipse)
+
+Spring boot
+
+Xampp
+
+# Démarrage projet
+
+Pour déployer ce projet suivez les étapes suivantes :
+
+Téléchargez le projet sur votre ordinateur.
+
+Ouvrez-le dans votre intellij idea par exemple.
+
+lancer Xampp.
+
+lancer le backend Spring boot.
